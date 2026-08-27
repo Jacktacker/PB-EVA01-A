@@ -1,4 +1,7 @@
 # Byron Manqueñir Vera
+# GIT PUBLICO:
+# https://github.com/Jacktacker/PB-EVA01-A.git
+
 from biblioteca import Biblioteca
 from libro import Libro
 from revista import Revista
