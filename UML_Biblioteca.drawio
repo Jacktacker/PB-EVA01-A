@@ -1,0 +1,43 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="UML Biblioteca Digital" id="0">
+    <mxGraphModel dx="1090" dy="1687" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="m" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#967300;align=left;verticalAlign=top;spacingTop=8;spacingLeft=10;" value="&lt;b&gt;Material&lt;/b&gt;&lt;hr&gt;- titulo: str&lt;br&gt;- autor: str&lt;br&gt;- __precio: int&lt;br&gt;- es_nuevo: bool&lt;hr&gt;+ get_precio(): int&lt;br&gt;+ set_precio(nuevo_precio: int): void&lt;br&gt;+ descripcion(): void" vertex="1">
+          <mxGeometry height="200" width="390" x="540" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="l" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;align=left;verticalAlign=top;spacingTop=8;spacingLeft=10;" value="&lt;b&gt;Libro&lt;/b&gt;&lt;hr&gt;- paginas: int&lt;hr&gt;+ descripcion(): void&lt;br&gt;&lt;i&gt;(sobrescribe)&lt;/i&gt;" vertex="1">
+          <mxGeometry height="140" width="300" x="50" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="r" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;align=left;verticalAlign=top;spacingTop=8;spacingLeft=10;" value="&lt;b&gt;Revista&lt;/b&gt;&lt;hr&gt;- edicion: int&lt;hr&gt;+ descripcion(): void&lt;br&gt;&lt;i&gt;(sobrescribe)&lt;/i&gt;" vertex="1">
+          <mxGeometry height="140" width="300" x="480" y="370" as="geometry" />
+        </mxCell>
+        <mxCell id="p" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;align=left;verticalAlign=top;spacingTop=8;spacingLeft=10;" value="&lt;b&gt;Periodico&lt;/b&gt;&lt;hr&gt;- fecha_publicacion: str&lt;hr&gt;+ descripcion(): void&lt;br&gt;&lt;i&gt;(sobrescribe)&lt;/i&gt;" vertex="1">
+          <mxGeometry height="140" width="300" x="855" y="380" as="geometry" />
+        </mxCell>
+        <mxCell id="b" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;align=left;verticalAlign=top;spacingTop=8;spacingLeft=10;" value="&lt;b&gt;Biblioteca&lt;/b&gt;&lt;hr&gt;- materiales: List&lt;Material&gt;&lt;hr&gt;+ agregar_material(material: Material): void&lt;br&gt;+ mostrar_catalogo(): void" vertex="1">
+          <mxGeometry height="170" width="390" x="1220" y="260" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="l" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=0;strokeWidth=2" target="m">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="r" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=0;strokeWidth=2" target="m">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="p" style="edgeStyle=orthogonalEdgeStyle;endArrow=block;endFill=0;strokeWidth=2" target="m">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="b" style="edgeStyle=orthogonalEdgeStyle;startArrow=diamondThin;startFill=0;endArrow=none;strokeWidth=2" target="m" value="0..*">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="n1" parent="1" style="shape=note;whiteSpace=wrap;html=1;fillColor=#e2f0d9;strokeColor=#70ad47;spacing=8" value="&lt;b&gt;Encapsulamiento&lt;/b&gt;&lt;br&gt;__precio es privado. Solo se modifica mediante set_precio() y debe ser mayor que 0.&lt;br&gt;es_nuevo indica si el material es nuevo." vertex="1">
+          <mxGeometry height="130" width="350" y="-40" as="geometry" />
+        </mxCell>
+        <mxCell id="n2" parent="1" style="shape=note;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;spacing=8" value="&lt;b&gt;Polimorfismo&lt;/b&gt;&lt;br&gt;Biblioteca usa List[Material]. material.descripcion() ejecuta la versión de Libro, Revista o Periodico según el objeto." vertex="1">
+          <mxGeometry height="110" width="380" x="860" y="570" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
